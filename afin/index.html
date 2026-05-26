@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EFIN</title>
+<link rel="stylesheet" href="css/estilos.css">
+<link rel="shortcut icon" href="img/efin logotipo.jpg" type="image/x-icon">
+</head>
+<body>
+
+<script>
+if(!localStorage.getItem("sesion")){
+    window.location.href="login.html";
+}
+</script>
+
+<header class="header">
+    <img src="img/efin logotipo.jpg" class="logo">
+    <h1>EFIN - Eficiencia Institucional</h1>
+    <p id="usuarioActivo"></p>
+
+    <div class="logos-extra">
+        <img src="img/ieLasnieves.png">
+        <img src="img/universidad.png">
+    </div>
+</header>
+
+<div class="menu">
+    <a href="pages/estudiantes.html">Estudiantes</a>
+    <a href="pages/eventos.html">Eventos</a>
+    <a href="pages/salones.html">Salones</a>
+    <a href="pages/usuarios.html">Usuarios</a>
+</div>
+
+<button onclick="cerrarSesion()">Cerrar sesión</button>
+<button onclick="modoOscuro()">🌙</button>
+
+<div class="dashboard">
+    <div class="card">
+        <h3>Estudiantes</h3>
+        <p id="totalEstudiantes"></p>
+    </div>
+
+    <div class="card">
+        <h3>Eventos</h3>
+        <p id="totalEventos"></p>
+    </div>
+
+    <div class="card">
+        <h3>Salones</h3>
+        <p id="totalSalones"></p>
+    </div>
+
+    <div class="card">
+        <h3>Grupo con mas estudiantes</h3>
+        <p id="grupoTop"></p>
+    </div>
+</div>
+
+<script src="js/base.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+</html>

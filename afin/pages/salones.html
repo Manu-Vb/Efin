@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/estilos.css">
+<link rel="shortcut icon" href="../img/efin logotipo.jpg" type="image/x-icon">
+</head>
+<body>
+
+<script>
+if(!localStorage.getItem("sesion")){
+    window.location.href="../login.html";
+}
+</script>
+
+<h2>Salones</h2>
+
+<input id="salon" placeholder="Salón">
+
+<select id="grupo">
+<option value="">Grupo</option>
+<option>6A</option><option>6B</option>
+<option>7A</option><option>7B</option>
+<option>8A</option><option>8B</option>
+<option>9A</option><option>9B</option>
+<option>10A</option><option>10B</option>
+<option>11A</option><option>11B</option>
+</select>
+
+<input type="time" id="hora">
+<input id="materia" placeholder="Materia">
+
+<button onclick="asignar()">Asignar</button>
+
+<ul id="listaSalones"></ul>
+
+<script src="../js/base.js"></script>
+<script src="../js/salones.js"></script>
+<script src="../js/auth.js"></script>
+
+</body>
+</html>

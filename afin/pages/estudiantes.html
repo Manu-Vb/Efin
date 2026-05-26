@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Estudiantes</title>
+<link rel="stylesheet" href="../css/estilos.css">
+<link rel="shortcut icon" href="../img/efin logotipo.jpg" type="image/x-icon">
+</head>
+<body>
+
+<script>
+if(!localStorage.getItem("sesion")){
+    window.location.href="../login.html";
+}
+</script>
+
+<h2>Gestión de Estudiantes</h2>
+
+<input id="nombre" placeholder="Nombre">
+<input id="doc" placeholder="Documento">
+<input id="edad" type="number">
+<input id="correo" placeholder="Correo">
+
+<select id="grupo">
+<option value="">Grupo</option>
+<option>6A</option><option>6B</option>
+<option>7A</option><option>7B</option>
+<option>8A</option><option>8B</option>
+<option>9A</option><option>9B</option>
+<option>10A</option><option>10B</option>
+<option>11A</option><option>11B</option>
+</select>
+
+<button onclick="guardar()">Guardar</button>
+<button onclick="exportar()">Exportar</button>
+
+<input id="buscar" placeholder="Buscar..." onkeyup="buscar()">
+
+<select id="filtroGrupo" onchange="filtrarGrupo()">
+<option value="">Todos</option>
+<option>6A</option><option>6B</option>
+<option>7A</option><option>7B</option>
+<option>8A</option><option>8B</option>
+<option>9A</option><option>9B</option>
+<option>10A</option><option>10B</option>
+<option>11A</option><option>11B</option>
+</select>
+
+<h3 id="contador"></h3>
+
+<table id="tabla">
+<thead>
+<tr>
+<th>Nombre</th><th>Doc</th><th>Grupo</th><th>Acciones</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+
+<script src="../js/base.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/estudiantes.js"></script>
+
+</body>
+</html>
