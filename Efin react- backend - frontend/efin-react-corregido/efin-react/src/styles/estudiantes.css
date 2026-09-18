@@ -1,0 +1,41 @@
+table{
+    margin:20px auto;
+    border-collapse:collapse;
+    width:90%;
+    background:var(--bg);
+    color:var(--text);
+    border-radius:10px;
+    overflow:hidden;
+}
+
+th{
+    background:var(--bg);
+    color:var(--text);
+    padding:12px;
+}
+
+td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+
+tr:hover{
+    background:#f1f1f1;
+}
+
+#botonesGrupos{
+    margin:15px;
+}
+
+#botonesGrupos button{
+    background:#7aa5ff;
+}
+
+#botonesGrupos button:hover{
+    background:#f4a6c1;
+}
+
+#contador{
+    margin-top:10px;
+    font-weight:bold;
+}

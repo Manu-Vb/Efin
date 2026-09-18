@@ -1,0 +1,19 @@
+.header{
+    background:#5b8def;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 20px;
+}
+
+.logo{
+    width:60px;
+    border-radius:10px;
+}
+
+.logos-extra img{
+    width:45px;
+    margin-left:10px;
+    border-radius:10px;
+}
